@@ -1,0 +1,65 @@
+
+:root {
+    --hoge-hoge: white;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.2rem;
+    background-color: #EEEEEE;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* The hack for Safari */
+        height: -webkit-fill-available;
+    }
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+section {
+    background-color: var(--hoge-hoge);
+
+    h1 {
+        background-color: black;
+        color: white;
+    }
+}
+
+.wrapper {
+    background-color: darkblue;
+    min-height: 100vh;
+    // display: grid;
+    // grid-template-rows: auto 1fr auto;
+}
+
+.layout-header {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.layout-body {
+    display: block;
+    background-color: darkkhaki;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+}
+
+.layout-footer {
+    background-color: darkcyan;
+    text-align: center;
+    width: 100%;
+}

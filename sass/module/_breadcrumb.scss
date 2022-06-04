@@ -1,0 +1,14 @@
+.breadcrumb {
+    & ul {
+        display: flex;
+        margin: 0;
+    }
+    & li::before {
+        content: ">";
+        padding: 0 1rem;
+    }
+    & li:first-child::before {
+        content: "";
+        padding: 0;
+    }
+}

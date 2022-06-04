@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://example.net/" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:title" content="タイトル" />
+  <meta property="og:description" content="ディスクリプション" />
+  <meta property="og:image" content="/img/icon.png" />
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="layout-header">
+      This is the header
+    </header>
+    <main class="layout-body">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Category</a></li>
+            <li><a href="">Sub-Category</a></li>
+            <li><span aria-current="page">Product</span></li>
+        </ul>
+      </nav>
+      <article>
+        <p>Main page content here, add more if you want to see the footer push down.</p>
+        <section class="section">
+          <div class="container">
+            {% block content %} {% endblock %}
+          </div>
+        </section>
+      </article>
+    </main>
+  </div>
+  <footer class="layout-footer">
+    ©2022
+  </footer>
+</body>
+
+</html>
